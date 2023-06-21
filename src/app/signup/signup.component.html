@@ -1,0 +1,64 @@
+<div class="container-fluid" style="background-color: bisque; ">
+    <div class="card" style="width: 18rem;">
+        <img src="https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg"
+            class="card-img-top" style="height: 200px;" alt="...">
+        <div class="card-body">
+            <h4>New User? Sign up</h4>
+            <hr>
+            
+            <form  [formGroup]="signupForm"  (ngSubmit)="signUp()" >
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" formControlName="name"  class="form-control" id="exampleInputPassword1" >
+                    <div *ngIf="signupForm.controls['name'].invalid && (signupForm.controls['name'].dirty || signupForm.controls['name'].touched)" class="alert alert-danger">
+                      <div *ngIf="signupForm.controls['name'].errors'required'">
+                        invalid name.
+                      </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mobile</label>
+                    <input type="text"  formControlName="mobile"  class="form-control" id="exampleInputPassword1" autocomplete="new-password">
+                  
+                    <div *ngIf="signupForm.controls['mobile'].invalid && (signupForm.controls['mobile'].dirty || signupForm.controls['mobile'].touched)" class="alert alert-danger">
+                      <div *ngIf="signupForm.controls['mobile'].errors'required'">
+                        Mobile is required.
+                      </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input type="email"  formControlName="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  autocomplete="new-password">
+                
+                    <div *ngIf="signupForm.controls['email'].invalid && (signupForm.controls['email'].dirty || signupForm.controls['email'].touched)" class="alert alert-danger">
+                      <div *ngIf="signupForm.controls['email'].errors'required'">
+                        Email is required.
+                      </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password"  formControlName="password"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                
+                    <div *ngIf="signupForm.controls['password'].invalid && (signupForm.controls['password'].dirty || signupForm.controls['password'].touched)" class="alert alert-danger">
+                      <div *ngIf="signupForm.controls['password'].errors'required'">
+                        Password is required.
+                      </div>
+                  </div>
+                </div>
+
+
+
+                
+                <button type="submit"
+                [disabled]=" signupForm.pristine || signupForm.invalid " class="btn btn-success" style="margin-left: 85px; margin-bottom: 10px;">
+                Sign Up
+            </button>
+            </form>
+
+            <a class="btn btn-outline-light" routerLink="/login">Already an user? Log in to get started</a>
+        </div>
+    </div>
+</div>

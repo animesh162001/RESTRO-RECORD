@@ -1,0 +1,11 @@
+h2{
+    color:white
+}
+.jumbotron{
+    padding: 40px;
+    background-color: rgb(218, 207, 191);
+}
+
+th, td {
+    padding: 15px;
+  }

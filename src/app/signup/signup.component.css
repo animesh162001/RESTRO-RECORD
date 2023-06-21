@@ -1,0 +1,11 @@
+.card{
+    height: 100vh;
+    border: 0.5px solid rgb(192, 186, 186);
+     position: absolute;
+     
+     left:40%;
+     background-color: black;
+     color: white;
+     
+ }
+ 

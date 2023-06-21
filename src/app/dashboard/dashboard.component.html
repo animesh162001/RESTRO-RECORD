@@ -1,0 +1,201 @@
+<!--NAME  VALIDATION: only accepts alphabetic and shouldnt accept more than 50 characters and required
+  email: valid email id and required
+  servicews should be required field 
+  valid mobile numb and is not required field
+  address should take multiple lines and max char 150.
+
+  grid should be sortable wrt mobile and name.
+  delete and edit should be modal popup
+  another learn component.
+  password validation for each one .
+
+
+  if the user is already there it should show user exists.
+  
+  
+-->
+
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <h2>Restaurant Record App</h2>
+        <div class="d-flex " style="     margin-left: 730px;"></div>
+       
+        <button type="button" class="btn btn-outline-success type="button class="btn btn-outline-success type" data-bs-toggle="modal" data-bs-target="#exampleModal"data-bs-target="#exampleModal">Add Restaurant</button>
+        <button type="button" routerLink="/login" type="button" class="btn btn-outline-warning" >Login</button>
+        <button type="button" routerLink="/signup" type="button" class="btn btn-outline-info">Sign Up</button>
+        <button type="button" routerLink="/login" class="btn btn-outline-success type="button class="btn btn-outline-danger type" >Log Out</button>
+        
+
+      </div>
+</nav>
+
+<!-- Jumbotron-->
+
+<div class="jumbotron">
+    <h1 class="display-4">Restaurant Records Management</h1>
+    <h4 class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</h4>
+    <hr class="my-4">
+    <p>You can save Records of Restaurant using Angular</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-md"  href="http://localhost:4200/learn" role="button">Learn more</a>
+    </p>
+  </div>
+
+<!--Table-->
+
+<table class="table table-striped" class="table datatable-table"  
+
+
+
+>
+    <thead>
+      <tr class="table-dark">
+        
+        <th  scope="col"   data-order="desc" data-name="id" >Restaurant Id</th>
+        <th scope="col"  data-order="desc" data-name="name" >Name</th>
+        <th scope="col"  data-order="desc" data-name="email">Email </th>
+        <th scope="col"  data-order="desc" data-name="mobile">Mobile </th>
+        <th scope="col"  data-order="desc" data-name="address">Address </th>
+        <th scope="col"  data-order="desc" data-name="services">Services </th>
+        <th scope="col" >Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of allRestaurantData">
+        <th scope="row">{{data.id}}</th>
+        
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.mobile}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.services}}</td>
+        <td>
+            <button  type="button"  (click)="deleteResto(data)" class="btn btn-danger btn-sm"   style="margin-right: 5px ;">Delete</button>
+            <button type="button" (click)="editResto(data)" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"data-bs-target="#exampleModal">Edit</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+        </div>
+
+        <div class="modal-body">
+          
+            
+            <form [formGroup]="formValue" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label  class="form-label">Name</label>
+                    <input type="text" formControlName="name" [ngClass]="{'is-invalid':submitted && formValue.controls['name'].errors}" class="form-control" id="exampleInputPassword1">
+                    <div *ngIf="submitted && formValue.controls['name'].errors " class="alert alert-danger">
+                      <div *ngIf="submitted && formValue.controls['name'].errors['required']">
+                        Name is required.  
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email address</label>
+                  <input type="email"  formControlName="email" [ngClass]="{'is-invalid':submitted && formValue.controls['email'].errors}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+                  <div *ngIf="submitted && formValue.controls['email'].errors " class="alert alert-danger">
+                    <div *ngIf="submitted && formValue.controls['email'].errors['required']">
+                      Email is required.  
+                    </div>
+                  </div>
+                
+                </div>
+
+                <div class="mb-3">
+                  <label  class="form-label">Services</label>
+                  <input type="text"  formControlName="services"[ngClass]="{'is-invalid':submitted && formValue.controls['services'].errors}"  class="form-control" id="exampleInputPassword1">
+                
+                  <div *ngIf="submitted && formValue.controls['services'].errors " class="alert alert-danger">
+                    <div *ngIf="submitted && formValue.controls['services'].errors['required']">
+                      Services are required.  
+                    </div>
+                  </div>
+                
+                
+                </div>
+
+               
+                
+                  <div class="mb-3">
+                    <label  class="form-label">Mobile</label>
+                    <input type="text"  formControlName="mobile" [ngClass]="{'is-invalid':submitted && formValue.controls['mobile'].errors}"  class="form-control" id="exampleInputPassword1">
+                  
+                    <div *ngIf="submitted && formValue.controls['mobile'].errors " class="alert alert-danger">
+                      
+                    </div>
+                  
+                  
+                  </div>
+                
+                  <div class="mb-3">
+                    <label  class="form-label">Address</label>
+                    <input type="text"  formControlName="address" [ngClass]="{'is-invalid':submitted && formValue.controls['address'].errors}"  class="form-control" id="exampleInputPassword1">
+                  
+                    <div *ngIf="submitted && formValue.controls['address'].errors " class="alert alert-danger">
+                      <div *ngIf="submitted && formValue.controls['address'].errors['required']">
+                        Address is required.  
+                      </div>
+                    </div>
+                  
+                  </div>
+                  
+                
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+              </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" id="clear" (click)="clickAddResto()">Clear</button>
+          <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="addResto()">Add Details</button>
+          <button *ngIf="showBtn" [disabled]="formValue.pristine || formValue.invalid " type="button" class="btn btn-primary" (click)="updateResto()">Update Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!---
+  
+  Another modal
+  
+  -->
+
+
+
+
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" >
+        Your Item Has Been Deleted
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

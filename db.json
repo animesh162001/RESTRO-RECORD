@@ -1,0 +1,178 @@
+{
+  "posts": [
+    {
+      "id": 8,
+      "name": "hnnnjkl",
+      "email": "adas49899@gmail.com",
+      "mobile": "+919348873662",
+      "address": "Patia",
+      "services": "efewferg"
+    },
+    {
+      "id": 10,
+      "name": "fgdnhyfh",
+      "email": "adas49899@gmail.com",
+      "mobile": "+919348873662",
+      "address": "Patia",
+      "services": "adefagrg"
+    }
+  ],
+  "signup": [
+    {
+      "name": "animesh ",
+      "email": "adas49899@gmail.com",
+      "mobile": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "tejal",
+      "email": "",
+      "services": "",
+      "mobile": "23233",
+      "address": "",
+      "id": 3
+    },
+    {
+      "name": "tejal",
+      "email": "adas49899@gmail.com",
+      "services": "",
+      "mobile": "12324",
+      "address": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "email": "",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 10
+    },
+    {
+      "name": "e",
+      "email": "w",
+      "services": "",
+      "mobile": "",
+      "address": "",
+      "id": 11
+    },
+    {
+      "name": "2",
+      "email": "qre",
+      "services": "",
+      "mobile": "qrwe",
+      "address": "",
+      "id": 12
+    },
+    {
+      "name": "grghtrhtr",
+      "email": "rwgterhtrhrtr@grmm",
+      "mobile": "frwgehtrh5y",
+      "address": "",
+      "password": "efewtgeyhjrj",
+      "id": 13
+    },
+    {
+      "name": "tejal",
+      "email": "",
+      "mobile": "",
+      "address": "",
+      "password": "",
+      "id": 14
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "qweqqe",
+      "id": 15
+    },
+    {
+      "name": "tejal",
+      "email": "asdsddsf@gdh",
+      "mobile": "+919348873662",
+      "password": "dsfdsdffesd",
+      "id": 16
+    },
+    {
+      "name": "Ashraf",
+      "email": "adas49899@gmail.com",
+      "mobile": "9437633486",
+      "password": "tejalmishra",
+      "id": 17
+    },
+    {
+      "name": "tejal mishra",
+      "email": "tejal22@gmail.com",
+      "mobile": "9438148392",
+      "password": "animesh-tejal",
+      "id": 18
+    },
+    {
+      "name": "gsjjfjfe",
+      "email": "adas49899@gmail.com",
+      "mobile": "+919348873662",
+      "password": "asefrgthhhyjuki",
+      "id": 19
+    },
+    {
+      "name": "tejal",
+      "email": "adas49899@gmail.com",
+      "mobile": "+919348873662",
+      "password": "ANIMESHDAS",
+      "id": 20
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
